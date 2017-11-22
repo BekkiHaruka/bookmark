@@ -25,7 +25,7 @@
     // 認証
     if (mysql_num_rows($query) == 1) {
        // ログイン成功
-　      $login = 'OK';
+	$login = 'OK';
        // データの取り出し
        $row = mysql_fetch_object($query);
        // 表示用ユーザー名をセッション変数に保存
@@ -36,7 +36,7 @@
     
     // セッション変数に記録
     $_SESSION['login'] = $login;
- 
+	} 
     // 移動
     if ($login == 'OK') {
         // ログイン成功：ブックマークメニュー画面へ

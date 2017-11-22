@@ -17,14 +17,14 @@
         mysql_select_db('sample_db',$conn);
         
         // データベースへ書き込むSQL文
-        $uql = 'INSERT INTO bookmark_tb
+        $sql = 'INSERT INTO bookmark_tb
                (bookmark_title,url,user_name)
                VALUES
                ("' . $title . '","' . $url. '","' .
                $_SESSION['name'] . '")';
 
         // SQL文の実行
-        $query = mysql_query($sql, &conn);
+        $query = mysql_query($sql, $conn);
     }
 ?>
 <html>
